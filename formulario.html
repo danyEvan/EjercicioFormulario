@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet"> 
+    <title> Formulario</title>
+</head>
+<body>
+<div class="container-fluid d-flex align-items-center justify-content-center mt-5" style="height: auto; width: 100%; ">
+
+    
+        <div id="caja" class="container d-flex row p-4 " style="height: auto; width: auto;">
+            
+                <form id="formulario" class="col-sm-12 p-4 " action="#">
+                    <h1 class=" pb-2">Formulario de Inscripcion</h1>
+                    <div class=" form-group">
+                        <label for="full">Nombre completo</label>
+                        <input class="form-control " type="text" name="full" id="fullname"
+                             onchange="validarNombre() " placeholder="Rene Descartés" autofocus>
+                        <p id="validacionNombre" class="datoNegativo"></p>
+                    </div>
+
+                    <div class=" form-group">
+                        <label for="mail">E-mail</label>
+                        <input class="form-control" type="email" name="mail" id="mail" placeholder=" piensoLuegoExisto@server.com">
+                    </div>
+
+                    <div class=" form-group">
+                        <label for="edad">Edad</label>
+                        <input class="form-control" type="number" name="edad" id="edad" onchange="validarEdad()" placeholder="ej: 23">
+                        <p id="mensajeValidacion" class="datoNegativo"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="ocupacion">Ocupacion</label>
+                        <select class="form-control" id="ocupacion" onchange="opcion(document.getElementById('ocupacion').value)" >
+                            <option class="order-1" >Elija una Opcion</option>
+                            <option>Trabajador</option>
+                            <option>Estudiante</option>
+                        </select>
+                      </div>
+                    
+                    <div id="masOpciones" class="pt-2 pb-2"></div>
+                    <button type="submit" onclick="captura()"  class="btn btn-primary pr-4 pl-4" >Enviar</button>
+                    
+                    
+                </form>
+                
+           
+           
+        </div>
+           
+        
+    
+
+</div>
+    <script src="./js/form.js"></script>
+    <script src="https://kit.fontawesome.com/6a74c4ea9a.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>

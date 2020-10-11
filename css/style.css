@@ -1,0 +1,17 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #eee;
+}
+
+#caja{
+    border-radius: 0.3rem;
+    background-color: rgb(255, 255, 255);
+}
+
+.datoNegativo{
+    color: red;
+    
+}
+span{
+    font-size: .9rem;
+}
